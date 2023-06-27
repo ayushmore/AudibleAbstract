@@ -1,6 +1,12 @@
 # Audible Abstract 🗣️
 
-Audible Abstract is a powerful voice memo summarizer that leverages the cutting-edge OpenAI Whisper ASR and GPT-4 models to transcribe and summarize your audio files. It is the perfect tool for professionals who need to quickly extract the key points from long voice memos or recordings, making information digestion both efficient and effortless.
+Audible Abstract is a tool that leverages OpenAI's cutting-edge Whisper ASR and GPT-4 models to convert audio voice memos into concise text summaries.
+
+This tool can help you transform lengthy audio records, meeting notes, or voice memos into easily digestible written summaries. It could be an ideal solution for students, professionals, researchers, or anyone in need of summarizing their voice memos.
+
+## How to Use
+
+Access the live application at [https://audibleabstract.streamlit.app/](https://audibleabstract.streamlit.app/).
 
 ## Features
 
