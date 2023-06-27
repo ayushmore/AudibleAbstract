@@ -12,7 +12,7 @@ load_dotenv()
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
 st.set_page_config(
-    page_title="Audible Abstract 🗣️",
+    page_title=" 🗣️ Audible Abstract ",
     layout='wide',
 )
 
@@ -20,7 +20,7 @@ def main():
 
     whisper_model = load_model()
 
-    st.title("Audible Abstract 🗣️")
+    st.title(" 🗣️ Audible Abstract ")
     st.markdown("Transform your **audio voice memos** into **concise summaries** with our state-of-the-art OpenAI Whisper ASR and GPT-4. Please upload your audio files below.")
 
     uploaded_audio_file = st.file_uploader("", type=ALLOWED_AUDIO_EXTENSIONS)
@@ -51,7 +51,7 @@ def transcribe_audio(model, audio_path):
 
 def summarize_text(text):
     with st.spinner("Summarizing..."):
-        system_msg = 'You are the world\'s best professional summarizer. Your role is to summarize and condense the key points and content in the text so that it distills the main messages and flow of the text. Use a casual and friendly tone as well as being thoughtful in the summarization and understanding what is truly happening. Make sure to think about this summarization step-by-step to ensure consistency and perfectness to the text. Before you return the summary, review it and critique it harshly based on our standards and then revise it to be as perfect as it can be based on our expectations. The text is provided: '
+        system_msg = 'You are the world\'s best professional summarizer. Your role is to summarize and condense the key points and content in the text so that it distills the main messages and flow of the text. The transcript is provided in the following text: '
         response = openai.ChatCompletion.create(
             model=OPENAI_MODEL,
             messages=[{"role": "system", "content": system_msg},
