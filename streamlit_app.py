@@ -4,12 +4,15 @@ from dotenv import load_dotenv
 import openai
 import whisper
 import streamlit as st
+import streamlit_analytics
 
 ALLOWED_AUDIO_EXTENSIONS = ["wav", "mp3", "m4a"]
 OPENAI_MODEL = "gpt-4"
 
 load_dotenv()
 openai.api_key = os.getenv("OPENAI_API_KEY")
+
+streamlit_analytics.start_tracking()
 
 st.set_page_config(
     page_title=" 🗣️ Audible Abstract ",
@@ -68,6 +71,8 @@ def display_transcription(transcription):
 def display_summary(summary):
     st.markdown("## 📝 Summary:")
     st.write(summary)
+
+streamlit_analytics.stop_tracking()
 
 if __name__ == "__main__":
     main()
