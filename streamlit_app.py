@@ -7,7 +7,7 @@ import streamlit as st
 import streamlit_analytics
 
 ALLOWED_AUDIO_EXTENSIONS = ["wav", "mp3", "m4a"]
-OPENAI_MODEL = "gpt-4"
+OPENAI_MODEL = "gpt-3.5-turbo"
 
 load_dotenv()
 openai.api_key = os.getenv("OPENAI_API_KEY")
